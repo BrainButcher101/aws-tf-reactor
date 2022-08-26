@@ -21,7 +21,7 @@ data "aws_ami" "amazon_linux" {
 }
 
 data "template_file" "user_data" {
-  template = file("${path.module}/user-data.sh")
+  template = file("./user-data.sh")
   vars = {
     repo_name = var.repo_name
   }
