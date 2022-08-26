@@ -39,10 +39,12 @@ resource "aws_key_pair" "key_pair" {
 
 resource "aws_security_group" "int_security_group" {
   name = "${var.name_prefix}_security_group"
+  vpc_id = var.vpc_id
 }
 
 resource "aws_security_group" "lb_security_group" {
   name = "${var.name_prefix}_lb_security_group"
+  vpc_id = var.vpc_id
 }
 
 resource "aws_security_group_rule" "int_inbound_http" {
