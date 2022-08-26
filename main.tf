@@ -8,7 +8,7 @@ resource "aws_launch_configuration" "launch" {
   image_id      = var.ami_id != "" ? var.ami_id : data.aws_ami.amazon_linux.id
 
   key_name        = aws_key_pair.key_pair.id
-  security_groups = [aws_security_group.lb-security_group.id]
+  security_groups = [aws_security_group.lb_security_group.id]
   user_data       = data.template_file.user_data.rendered
 
   lifecycle {
