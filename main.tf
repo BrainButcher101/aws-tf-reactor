@@ -96,7 +96,7 @@ resource "aws_security_group_rule" "lb_outbound_everything" {
 
 resource "aws_autoscaling_group" "auto_scaling_group" {
   name_prefix = "${var.name_prefix}-reactor-asg-"
-  launch_configuration = var.launch_config_name
+  launch_configuration = aws_launch_configuration.launch.name
   vpc_zone_identifier  = var.public_subnets
 
   min_size = 1
