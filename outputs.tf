@@ -5,7 +5,7 @@ output "private_key" {
 }
 
 output "launch_config_name" {
-  value       = aws_launch_configuration.launch_config.name
+  value       = aws_launch_configuration.launch.name
   description = "Name of the launch configuration to be used as input for other modules"
 }
 

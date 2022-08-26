@@ -124,7 +124,7 @@ resource "aws_lb" "load_balancer" {
   name               = "${var.name_prefix}-load-balancer"
   load_balancer_type = "application"
   subnets            = var.public_subnets
-  security_groups    = [aws_security_group.security_group.id]
+  security_groups    = [aws_security_group.lb_security_group.id]
 }
 
 resource "aws_lb_listener" "http" {
