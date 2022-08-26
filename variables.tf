@@ -13,7 +13,7 @@ variable "server_port" {
 variable "instance_type" {
     description = "Instance type for the server"
     type = string
-    default = "t2.micro"
+    default = "t4g.micro"
 }
 
 variable "ami_id" {
