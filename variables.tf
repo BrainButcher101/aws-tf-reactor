@@ -35,11 +35,11 @@ variable "repo_name" {
   default     = "ReactCalculator"
 }
 
-variable "launch_config_name" {
-  description = "The name of the Launch Config obtained from the launch config module"
-  type        = string
-  default     = "NoDefaultAvailable"
-}
+# variable "launch_config_name" {
+#   description = "The name of the Launch Config obtained from the launch config module"
+#   type        = string
+#   default     = "NoDefaultAvailable"
+# }
 
 variable "public_subnets" {
   type        = list(string)
