@@ -1,0 +1,27 @@
+{
+    "$schema": "http://json-schema.org/draft-07/schema#",
+    "properties": {
+
+        "public_subnets": {
+          "type": "array",
+          "title": "Loadbalancer subnet ids",
+          "default": [
+            "<value 1>"           
+          ],
+          "items": {
+            "type": "string",
+            "default": ""
+          },
+
+         "vpc_id": {
+                "type": "string",
+                "title": "VPC ID where to deploy"
+                
+              },
+         "key_name": {
+                "type": "string",
+                "title": "Key Pair name to use",
+                "default": "default value"
+              }
+    }
+}
